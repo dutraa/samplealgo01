@@ -21,7 +21,7 @@ def _dry_run_submit(*args, **kwargs):
 # api.submit_order =_dry_run_submit
 
 
-def _get_prices(symbols, end_dt, max_workers=5):
+def _get_prices(symbols, end_dt, max_workers=10):
     '''Get the map of DataFrame price data from Alpaca's data API.'''
 
     start_dt = end_dt - pd.Timedelta('50 days')
